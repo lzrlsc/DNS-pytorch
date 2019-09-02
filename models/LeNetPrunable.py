@@ -12,8 +12,7 @@ class LeNetPrunable(nn.Module):
     Rispetto ad AlexNetPrunable, non è necessario prunare seperatamente classifier e features
     '''
 
-    #todo rimuovere distillation
-    def __init__(self, pretrained_model_path, c_rate = 4, c_rate_conv = 1.7, margin =0.1, gamma = 0.0001, power = -1 ):
+    def __init__(self, pretrained_model_path, c_rate = 4, margin =0.1, gamma = 0.0001, power = -1 ):
         super(LeNetPrunable, self).__init__()
         self.gamma = gamma
         self.thresholds = []
